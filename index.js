@@ -4,13 +4,14 @@ class TaxCalculator{
         let rate = 15;
         this.state = 'TX';
         this.exempt = false;
-    }
-    
-    #calculate(){
+        let calculate = () => {
         if(this.exempt){
             return calculateExempt(1.37);
         }else{
             return calculateNonExempt(5.72);
         }
     }
+    }
+    
+    
 }

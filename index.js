@@ -1,17 +1,24 @@
 class TaxCalculator{
     
     constructor(){
-        let rate = 15;
         this.state = 'TX';
         this.exempt = false;
-        let calculate = () => {
+    }
+    #rate = 15;
+
+    #calculateExempt(number){
+        return number * 201;
+    }
+
+    #calculateNonExempt(number){
+        return number + number;
+    }
+    
+    calculate(){
         if(this.exempt){
             return calculateExempt(1.37);
         }else{
             return calculateNonExempt(5.72);
         }
     }
-    }
-    
-    
 }
